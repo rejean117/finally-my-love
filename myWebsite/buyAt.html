@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rejean And Shen Website</title>
+  <link rel="stylesheet" href="buyAt.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="header-title">Book Gallery</h1>
+
+    <!-- User Profile Dropdown -->
+    <div class="user-menu">
+      <!-- User Icon (could be replaced with an image) -->
+      <i class="user-icon" onclick="toggleDropdown()">👤</i>
+
+      <!-- Dropdown Menu -->
+      <div id="userDropdown" class="dropdown">
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="index.html">Log out</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="outer-border">
+    <div class="inner-container">
+      <div class="padding-container">
+
+        <!-- Search Bar -->
+        <form class="search-container" action="search.html" method="get">
+          <input type="text" name="query" placeholder="Search..." />
+          <button type="submit"><img src="search.png" alt="Search" /></button>
+        </form>
+
+        <!-- Content -->
+        <div class="content-wrapper">
+          <h1>Available At</h1>
+
+          <!-- Book Entries -->
+          <div class="book-entry">
+  
+            <!-- 📍 Physical Stores First -->
+            <div class="book-logos">
+                <h2>Available in Physical Stores</h2>
+                <div class="logo-list">
+                    <div class="logo-item">
+                      <p>National Bookstore</p>
+                      <img src="nationalbookstore.jpg" alt="National Bookstore" />
+                    </div>
+                    <div class="logo-item">
+                      <p>Booksale</p>
+                      <img src="booksale.png" alt="Booksale" />
+                    </div>
+                    <div class="logo-item">
+                      <p>Powerbooks</p>
+                      <img src="powerbooks.png" alt="Powerbooks" />
+                    </div>
+                    <div class="logo-item">
+                      <p>Fully Booked</p>
+                      <img src="fullybooked.png" alt="Fully Booked" />
+                    </div>
+                    <div class="logo-item">
+                      <p>Bookay-Ukay</p>
+                      <img src="Bookayukay.png" alt="Bookay-Ukay" />
+                    </div>
+                </div>
+              </div>
+
+            <!-- 🌐 Online Shops Below -->
+            <div class="book-logos">
+                <h2>Available in Online Shops</h2>
+                <div class="logo-list">
+                    <div class="logo-item"><p>Shopee</p><img src="shopee.png" alt="Shopee" /></div>
+                    <div class="logo-item"><p>Lazada</p><img src="lazada.png" alt="Lazada" /></div>
+                    <div class="logo-item"><p>Amazon</p><img src="amazon.jpg" alt="Amazon" /></div>
+                    <div class="logo-item"><p>BookDepository</p><img src="BookDepository.jpg" alt="BookDepository" /></div>
+                    <div class="logo-item"><p>Google Books</p><img src="googlebooks.png" alt="googlebooks" /></div>
+                    <div class="logo-item"><p>Good Will</p><img src="googwill.png" alt="googwill" /></div>
+                </div>
+              </div>
+          
+          </div>
+        </div>
+
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <a href="home.html"><img src="home.png" alt="Home" title="Home">
+                <a href="ongoing.html"><img src="quill.png" alt="Ongoing " title="Browse">
+                <a href="completed.html"> <img src="checked.png" alt="Completed" title="Browse">
+                <a href="buyAt.html" class="active">"<img src="cart.png" alt="Were to buy/ Available at" title="History">
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="iconsBehaivor.js"></script>
+  <!-- Dropdown Menu Script -->
+  <script>
+    function toggleDropdown() {
+      document.getElementById("userDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.user-icon')) {
+        var dropdowns = document.getElementsByClassName("dropdown");
+        for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+  <script>
+    const sidebarLinks = document.querySelectorAll('.sidebar a');
+    sidebarLinks.forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

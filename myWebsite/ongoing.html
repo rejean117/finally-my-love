@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rejean And Shen Website</title>
+  <link rel="stylesheet" href="ongoing.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="header-title">Book Gallery</h1>
+
+    <!-- User Profile Dropdown -->
+    <div class="user-menu">
+      <!-- User Icon (could be replaced with an image) -->
+      <i class="user-icon" onclick="toggleDropdown()">👤</i>
+
+      <!-- Dropdown Menu -->
+      <div id="userDropdown" class="dropdown">
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="index.html">Log out</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="outer-border">
+    <div class="inner-container">
+      <div class="padding-container">
+
+        <!-- Search Bar -->
+        <form class="search-container" action="search.html" method="get">
+          <input type="text" name="query" placeholder="Search..." />
+          <button type="submit"><img src="search.png" alt="Search" /></button>
+        </form>
+
+        <!-- Content -->
+        <div class="content-wrapper">
+          <h1>On Going</h1>
+
+          <!-- Book Entries -->
+          <div class="book-section">
+            <div class="book-entry">
+              <img src="book21.jpg" alt="Book Cover" class="book-cover" />
+              <div class="book-synopsis">
+                <h2>Possessive Series 11: Valerian Volkzki</h2>
+                <p>Synopsis: The story follows Xildius Vouganville, known as XV, a brilliant professor who solves mysterious cases using his expertise in anatomy and psychology. Due to a unique condition, he remains confined within his mansion, Villa Vouganville. Fift Salustiana, enticed by a lucrative salary advertised on a flyer, becomes his new assistant. As she delves into her role, Fift uncovers the peculiar nature of XV's profession and finds herself drawn to the intense allure he exudes. The narrative explores whether Fift can bring light into the professor's shadowed existence</p>
+                <a href="https://www.wattpad.com/story-id" class="read-more-link" target="_blank">Read more on Wattpad</a>
+              </div>
+            </div>
+
+            <div class="book-entry">
+              <img src="book23.jpg" alt="Book Cover" class="book-cover" />
+              <div class="book-synopsis">
+                <h2>Possessive Series 12: Cali Sudalga</h2>
+                <p>Synopsis: Cali Sudalga has it all—wealth, luxury cars, yachts, and a mansion...</p>
+                <a href="https://www.wattpad.com/story-id" class="read-more-link" target="_blank">Read more on Wattpad</a>
+              </div>
+            </div>
+
+            <div class="book-entry">
+              <img src="book3.jpeg" alt="Book Cover" class="book-cover" />
+              <div class="book-synopsis">
+                <h2>Temptation Island 5</h2>
+                <p>Synopsis: The story follows Xildius Vouganville, known as XV, a brilliant professor...</p>
+                <a href="https://www.wattpad.com/story-id" class="read-more-link" target="_blank">Read more on Wattpad</a>
+              </div>
+            </div>
+
+            <div class="book-entry">
+              <img src="book5.jpeg" alt="Book Cover" class="book-cover" />
+              <div class="book-synopsis">
+                <h2>Broken Mask</h2>
+                <p>Synopsis: The story follows Xildius Vouganville, known as XV, a brilliant professor...</p>
+                <a href="https://www.wattpad.com/story-id" class="read-more-link" target="_blank">Read more on Wattpad</a>
+              </div>
+            </div>
+
+            <div class="book-entry">
+              <img src="book20.jpg" alt="Book Cover" class="book-cover" />
+              <div class="book-synopsis">
+                <h2>One night with my boss then tommorow continue</h2>
+                <p>Sypnosis: "Elena had a one-night stand with her boss, then they continued the next day."...</p>
+                <a href="https://www.wattpad.com/story-id" class="read-more-link" target="_blank">Read more on Wattpad</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <a href="home.html"><img src="home.png" alt="Home" title="Home">
+                <a href="ongoing.html"class= active><img src="quill.png" alt="Ongoing " title="Browse"></a>
+                <a href="completed.html"> <img src="checked.png" alt="Completed" title="Browse">
+                <a href="buyAt.html"><img src="cart.png" alt="Were to buy/ Available at" title="History">
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="iconsBehaivor.js"></script>
+  <!-- Dropdown Menu Script -->
+  <script>
+    function toggleDropdown() {
+      document.getElementById("userDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.user-icon')) {
+        var dropdowns = document.getElementsByClassName("dropdown");
+        for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+   <script>
+    const sidebarLinks = document.querySelectorAll('.sidebar a');
+    sidebarLinks.forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

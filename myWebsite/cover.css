@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url("bg.png");
+    /*background-image: linear-gradient(to bottom right, #d5bdf3, #c4b3e0);*/
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.welcome-section {
+    text-align: center;
+    position: relative;
+}
+
+.welcome-img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.welcome-text {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3d4c91;
+    color: white;
+    padding: 10px 20px;
+    font-size: 32px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.cecelib-icon img {
+    width: 250px; /* increased from 200px */
+    border-radius: 10px;
+    border: 5px solid #9a81bc;
+    margin-bottom: 20px;
+}
+
+
+.cecelib-text-box {
+    background: linear-gradient(to bottom, #3e49b6, #8e2de2);
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 600px;
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.start-btn {
+    display: block;
+    margin: 40px auto;
+    background-color: #f0a3da;
+    color: #333;
+    border: none;
+    padding: 14px 28px; /* increased size */
+    font-size: 18px;     /* increased font */
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    animation: pulse 2s infinite;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.start-btn:hover {
+    transform: scale(1.05);
+    background-color: #e68cc9;
+}
+
+/* On click (active), change color and glow text */
+.start-btn:active {
+    color: #ffffff;
+    text-shadow: 0 0 6px #fff, 0 0 10px #ff00ff, 0 0 16px #ff00ff;
+    transform: scale(0.98); /* slight click press effect */
+}
+/* 🌐 Responsive Design */
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 50px 15px;
+        font-size: 1.2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1.2em;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .hero {
+        padding: 30px;
+        font-size: 1em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 8px;
+    }
+}

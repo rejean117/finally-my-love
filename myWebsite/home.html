@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rejean And Shen Website</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="header-title">Book Gallery</h1>
+
+    <!-- User Profile Dropdown -->
+    <div class="user-menu">
+      <!-- User Icon (could be replaced with an image) -->
+      <i class="user-icon" onclick="toggleDropdown()">👤</i>
+
+      <!-- Dropdown Menu -->
+      <div id="userDropdown" class="dropdown">
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="index.html">Log out</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="outer-border">
+    <div class="inner-container">
+      <div class="padding-container">
+
+        <!-- Search Bar -->
+        <form class="search-container" action="search.html" method="get">
+          <input type="text" name="query" placeholder="Search..." />
+          <button type="submit"><img src="search.png" alt="Search" /></button>
+        </form>
+
+        <!-- Content -->
+        <div class="content-wrapper">
+          <h1>Featured Books</h1>
+
+          <!-- Book Entries -->
+          <div class="book-section">
+            <div class="book-card">
+                <img src="book1.jpeg" alt="Book 1">
+                <p>Possesive Series 1: Tyron Zapanta</p>
+              </div>
+              <div class="book-card">
+                <img src="book2.jpg" alt="Book 2">
+                <p>Possesive Series 2: Iuhence Vergara</p>
+              </div>
+              <div class="book-card">
+                <img src="book3.jpeg" alt="Book 3">
+                <p>Temptation Island 3: Switch Desire</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book4.jpeg" alt="Book 4">
+                <p>Amorous Agreement</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book5.jpeg" alt="Book 5">
+                <p>Organosi 1: Broken Mask</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book6.jpg" alt="Book 6">
+                <p>Dangerous Gentleman</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book7.jpeg" alt="Book 7">
+                <p>Possesive Series 3: Train Wolkzbin</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book8.jpg" alt="Book 8">
+                <p>Je T'aime</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book9.jpg" alt="Book 9">
+                <p>Temptation Island 1: Forbidden Pleasure</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book10.jpg" alt="Book 10">
+                <p>Possesive Series 5: Calyx Vergara</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book11.jpg" alt="Book 11">
+                <p>Possessive Series 9: Lash Coleman</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book12.png" alt="Book 5">
+                <p>Temptation Island: Desidero Me, Amore Mio</p>
+              </div>
+              <div class="book-card">
+                <img src="book13.jpg" alt="Book 5">
+                <p>Possesive Series 4: Lander Storm</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book14.jpg" alt="Book 5">
+                <p>Unbridled 1: Crossing the line</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book15.jpg" alt="Book 5">
+                <p>Possesive Series 7: Ymar Stroam</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book16.webp" alt="Book 5">
+                <p>Possesive Series 6: Dark Montero</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book17.jpg" alt="Book 5">
+                <p>Wanderlust: Romance in F Minor</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book18.jpg" alt="Book 5">
+                <p>Possesive Series 8: Shun Kim</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book19.jpg" alt="Book 5">
+                <p>Possesive Series 10: Lath Coleman</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book20.jpg" alt="Book 5">
+                <p>One Night With My Boss</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book21.jpg" alt="Book 5">
+                <p>Possesive Series 11: Valerian Volkzki</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book22.jpg" alt="Book 5">
+                <p>Desiring Her</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book23.jpg" alt="Book 5">
+                <p>Posessive Series 12: Cali Sudalga</p>
+              </div>
+    
+              <div class="book-card">
+                <img src="book24.jpg" alt="Book 5">
+                <p>Creed's Lover</p>
+              </div>
+          </div>
+        </div>
+
+        <!-- Sidebar Navigation -->
+
+        <nav class="sidebar">
+          <a href="home.html" class="active"><img src="home.png" alt="Home" title="Home"></a>
+          <a href="ongoing.html"><img src="quill.png" alt="Ongoing" title="Browse"></a>
+          <a href="completed.html"><img src="checked.png" alt="Completed" title="Browse"></a>
+          <a href="buyAt.html"><img src="cart.png" alt="Where to buy/Available at" title="History"></a>
+        </nav>
+        
+      </div>
+    </div>
+  </div>
+
+  <script src="iconsBehaivor.js"></script>
+  <!-- Dropdown Menu Script -->
+  <script>
+    function toggleDropdown() {
+      document.getElementById("userDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.user-icon')) {
+        var dropdowns = document.getElementsByClassName("dropdown");
+        for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+  <script>
+    const sidebarLinks = document.querySelectorAll('.sidebar a');
+    sidebarLinks.forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

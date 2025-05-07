@@ -1,0 +1,234 @@
+/* -------------------- General -------------------- */ 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #d5c8f2;
+  }
+
+  /* --------- Left Side Border (Fixed Background Bar) --------- */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100vh;
+    background: #c49bfa;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 0;
+  }
+
+  /* -------------------- Sidebar -------------------- */
+  .sidebar {
+    position: fixed;
+    top: 170px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    z-index: 10;
+  }
+
+  .sidebar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #6937ac;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+  }
+
+  .sidebar a:hover {
+    transform: scale(1.1);
+    background-color: #b8b3e4;
+  }
+
+  .sidebar img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .sidebar a.active {
+    background-color: white;
+  }
+
+  .sidebar a.active img {
+    filter: brightness(0);
+  }
+
+  /* -------------------- Search Bar -------------------- */
+  .search-container {
+    position: fixed;
+    top: 20px;
+    right: 90px;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 0.3px 10px;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .search-container input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    border-radius: 50px;
+    font-size: 14px;
+    width: 260px;
+    background: transparent;
+    color: white;
+  }
+
+  .search-container input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.2s;
+  }
+
+  .search-container button:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .search-container button img {
+    width: 30px;
+    height: 30px;
+    background-color: #f2e4d7;
+    border-radius: 20px;
+  }
+
+  /* -------------------- Header -------------------- */
+  .site-header {
+    background-color: #c49bfa;
+    padding: 21px 40px;
+    text-align: left;
+    color: #f2e4d7;
+    border-bottom: 5px solid #d1b3ff;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-left: 8px solid #c49bfa;
+    box-sizing: border-box;
+  }
+
+  .header-title {
+    margin: 0;
+    font-size: 2.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+  }
+
+  /* -------------------- User Profile -------------------- */
+  .user-menu {
+    position: fixed; 
+    right: 20px;     
+    top: 20px;      
+    display: inline-block;
+    z-index: 1000;   
+  }
+
+  .user-icon {
+    font-size: 40px;
+    cursor: pointer;
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: #c49bfa;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown a {
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown a:hover {
+    background-color: #7f73dc;
+  }
+
+  .show {
+    display: block;
+  }
+
+  /* -------------------- Book Gallery -------------------- */
+  .book-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .book-card {
+    background-color: #f2e4d7;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .book-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .book-card p {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* -------------------- Responsive -------------------- */
+  @media (max-width: 768px) {
+    .book-gallery {
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .book-card {
+      width: 150px;
+    }
+
+    .sidebar {
+      left: 10px;
+    }
+
+    body::before {
+      width: 60px;
+    }
+  }
